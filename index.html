@@ -51,6 +51,13 @@
       drawer.classList.toggle('is-visible');
       obfuscator.classList.toggle('is-visible');
     });
+
+    document.getElementById('menu-obfuscator').addEventListener('click', function() {
+      var drawer = document.getElementById('menu');
+      var obfuscator = document.getElementById('menu-obfuscator');
+      drawer.classList.remove('is-visible');
+      obfuscator.classList.remove('is-visible');
+    });
   </script>
 </body>
 
