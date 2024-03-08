@@ -1,15 +1,11 @@
-.mdl-layout__obfuscator {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-  transition: opacity 0.4s;
+.demo-card-wide.mdl-card {
+  width: 512px;
 }
-
-.is-visible.mdl-layout__obfuscator {
-  z-index: 999;
-  opacity: 1;
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
