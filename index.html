@@ -14,7 +14,6 @@
   <!-- Material Design icon font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link type="text/css" rel="stylesheet" href="style.css"/>
-  <meta>
 </head>
 
 <body>
@@ -25,10 +24,13 @@
           <span class="mdl-layout-title">Title</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
+          <!-- Navigation toggle button -->
+          <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-toggle">
+            <i class="material-icons">menu</i>
+          </button>
         </div>
       </header>
-      <div class="mdl-layout__drawer">
+      <div class="mdl-layout__drawer" id="menu">
         <span class="mdl-layout-title">Title</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Link</a>
@@ -36,13 +38,20 @@
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
         </nav>
-        </div>
+      </div>
 
       <main class="mdl-layout__content">
       </main>
-      <div class="mdl-layout__obfuscator-right"></div>
+      <div class="mdl-layout__obfuscator-right" id="menu-obfuscator"></div>
     </div>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var drawer = document.getElementById('menu');
+      var obfuscator = document.getElementById('menu-obfuscator');
+      drawer.classList.toggle('is-visible');
+      obfuscator.classList.toggle('is-visible');
+    });
+  </script>
 </body>
 
 </html>
