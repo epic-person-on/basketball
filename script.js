@@ -1,20 +1,13 @@
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
-document.getElementsByTagName('head')[0].appendChild(script);
-$('#notif').click(function(){
- if($('.mdl-layout__drawer-right').hasClass('active')){       
-    $('.mdl-layout__drawer-right').removeClass('active'); 
- }
- else{
-    $('.mdl-layout__drawer-right').addClass('active'); 
- }
-});
+    // Function to handle search button click
+    function redirectToSearch() {
+      var searchTerm = document.getElementById('search').value;
+      // Redirect to search page with query parameter
+      window.location.href = 'search.html?query=' + encodeURIComponent(searchTerm);
+    }
 
-$('.mdl-layout__obfuscator-right').click(function(){
- if($('.mdl-layout__drawer-right').hasClass('active')){       
-    $('.mdl-layout__drawer-right').removeClass('active'); 
- }
- else{
-    $('.mdl-layout__drawer-right').addClass('active'); 
- }
-});
+    // Add event listener to search button
+    document.getElementById('search').addEventListener('keydown', function(event) {
+      if (event.key === "Enter") {
+        redirectToSearch();
+      }
+    });
