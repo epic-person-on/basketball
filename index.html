@@ -42,6 +42,7 @@
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
             <i class="material-icons">search</i>
           </label>
+        </div>
         <!-- Navigation -->
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="#">Link 1</a>
@@ -83,20 +84,5 @@
       </div>
     </main>
   </div>
-    <script>
-    // Function to handle search button click
-    function redirectToSearch() {
-      var searchTerm = document.getElementById('search').value;
-      // Redirect to search page with query parameter
-      window.location.href = 'search.html?query=' + encodeURIComponent(searchTerm);
-    }
-
-    // Add event listener to search button
-    document.getElementById('search').addEventListener('keydown', function(event) {
-      if (event.key === "Enter") {
-        redirectToSearch();
-      }
-    });
-  </script>
 </body>
 </html>
